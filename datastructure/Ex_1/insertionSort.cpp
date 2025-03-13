@@ -3,12 +3,16 @@ void insertionSort(int arr[], int n) { //n is lenght of array
 	int i, j, key; 
 	for (i = 1; i < n; i++) {
 		key = arr[i];
-		j = i - 1;
-		while (j >= 0 && arr[j] > key) {
-			arr[j + 1] = arr[j];
-			j = j - 1;
+		j = i - 1; 
+		while (j >= 0 && arr[j] > key) { //compare left value
+			arr[j + 1] = arr[j]; //shift right bigger number
+			j--; //checking smaller number (checking left value)
 		}
-		arr[j + 1] = key;
+		arr[j + 1] = key; //correctly inserts key value
+		for (int k = 0; k < n; k++) {
+			printf("%d ", arr[k]);
+		}
+		printf("\n"); //after loop
 	}
 }
 int main() {
