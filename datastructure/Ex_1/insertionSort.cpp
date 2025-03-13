@@ -27,6 +27,7 @@ int main() {
 
 	insertionSort(arr, n); //insertion sorting
 
+	printf("\n");
 	printf("After Sorting\n"); //print sorted array
 	for (int i = 0; i < n; i++) {
 		printf("%d ", arr[i]);
